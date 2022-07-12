@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="theme.css">
+</head>
+
+<style>
+    .main-title-cta1-wrapper {
+        height: 30px;
+        overflow: hidden;
+    }
+
+    .main-title-cta5-wrapper {
+        height: 30px;
+        overflow: hidden;
+    }
+
+    .main-title-cta1 {
+        font-weight: 700;
+        float: left;
+    }
+
+    .main-title-cta5 {
+        font-weight: 300;
+        float: left;
+    }
+
+    .main-title-cta1-wrapper:before {
+        content: "";
+        display: block;
+        width: 100%;
+        border: 0.5px solid #3fbddf;
+        margin-top: 18px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .main-title-cta5-wrapper:before {
+        content: "";
+        display: block;
+        width: 100%;
+        border: 0.5px solid #3fbddf;
+        margin-top: 18px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .main-title-cta1-wrapper h2 {
+        color: #1c5c9e;
+        background-color: white;
+        font-size: 24px;
+        width: auto;
+        margin: 0px;
+        padding-right: 25px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-title-cta5-wrapper h2 {
+        color: #1c5c9e;
+        background-color: white;
+        font-size: 24px;
+        width: auto;
+        margin: 0px;
+        padding-right: 25px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .image-cta1 {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    /* .items-wrapper,
+    .small-items-wrapper {
+        height: 270px;
+        overflow: hidden;
+    } */
+
+    .items-wrapper a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .cta5-item-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 270px;
+    }
+
+    .cta5-item-title {
+        color: white;
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+
+    .cta5-item-title h2 {
+        font-size: 27px;
+        text-transform: none;
+    }
+
+    .cta5-item-body {
+        height: 90px;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 49%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .cta5-item-body p {
+        color: #1c5c9e;
+        font-style: italic;
+        bottom: 20px;
+    }
+
+    .cta5-item-body>div {
+        width: 150px;
+        bottom: 12px;
+        right: 10px;
+    }
+
+    @media (max-width: 991px) {
+        .cta5-item-body p {
+            bottom: 60px;
+        }
+
+        .cta5-item-body>div {
+            width: 100%;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+
+    .cta5-item-btn-wrapper {
+        color: #e33c46;
+        font-size: 18px;
+        border: #e33c46 solid 2px;
+        height: 40px;
+    }
+
+    .cta5-item-btn {
+        text-align: center;
+        font-weight: 500;
+        width: 100%;
+        height: 100%;
+        padding-top: 3px;
+        padding-left: 10px;
+        float: left;
+    }
+
+    .cta5-item-btn:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 10px;
+        border-color: transparent transparent transparent #e7355e;
+        position: absolute;
+        top: 14px;
+        left: 16px;
+    }
+
+    .items-wrapper a:hover .cta5-item-btn-wrapper {
+        color: white;
+        background-color: #e33c46;
+    }
+
+    .items-wrapper a:hover .cta5-item-btn:before {
+        border-color: transparent transparent transparent white;
+    }
+
+    .ts-landscape-item {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .ts-landscape-item-image {
+        height: 100%;
+    }
+
+    .ts-image-cover {
+        max-width: 100%;
+        max-height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    .ts-landscape-item-title {
+        top: 38%;
+    }
+
+    .ts-landscape-item-title h3 {
+        background-color: rgba(28, 92, 158, 0.7);
+        color: white;
+        font-size: 27px;
+        font-weight: bold;
+        padding: 20px 20px 20px 55px;
+        z-index: 1;
+    }
+
+    .ts-landscape-item-title h3:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7.5px 0 7.5px 15px;
+        border-color: transparent transparent transparent #ffffff;
+        position: absolute;
+        top: 28px;
+        left: 25px;
+    }
+
+    .items-wrapper a:hover .ts-landscape-item-title h3 {
+        background-color: white;
+        color: rgba(28, 92, 158, 0.7);
+    }
+
+    .items-wrapper a:hover .ts-landscape-item-title h3:before {
+        border-color: transparent transparent transparent rgba(28, 92, 158, 0.7);
+    }
+</style>
+
+<body>
+    <div class="container bg-white p-0">
+        <!-- CTA1 -->
+        <section class="h-auto row">
+            <div class="col-12 px-0">
+                <div class="main-title-cta1-wrapper position-relative mt-3 mb-4 p-0">
+                    <h2 class="main-title-cta1 text-uppercase">La sélection du
+                        moment</h2>
+                </div>
+
+                <div class="px-0 mb-4">
+                    <a class="col-12 mb-4" href="/promo-ski/early-booking-vacances-ski.html" target="_self"
+                        rel="index, follow">
+                        <div class="image-cta1 col-12 px-0">
+                            <img class="img-fluid w-100"
+                                src="https://www.travelski.com/Content/fr_220621132354_629df2fde8a4027c6fa39721.png?ts=220621132704"
+                                loading="lazy">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA5 -->
+        <section class="h-auto row">
+            <div class="col-12 p-0">
+                <div class="main-title-cta5-wrapper position-relative mt-3 mb-4 p-0">
+                    <h2 class="main-title-cta5 text-uppercase">Laissez-vous <b
+                            style="font-weight: 700;">guider&nbsp;</b>
+                    </h2>
+                </div>
+            </div>
+            <!-- BIG ITEMS -->
+            <div class="items-wrapper col-12 p-0 mb-3">
+                <div class="row">
+                    <a href="/ski/ski-fevrier.html#xtatc=INT-1905" class="col-lg-6 mb-3" rel="index, follow">
+                        <div class="cta5-item-image col-12 p-0 position-relative"
+                            style="background-image:
+                            url(&quot;https://www.travelski.com/Content/fr_220620101326_5d4a90bd19a3ea2a90852c8d.jpg?ts=220620122114&quot;);">
+                            <div class="cta5-item-title col-12 position-relative">
+                                <h2><b>Vacances de février</b></h2>
+                            </div>
+
+                            <div class="cta5-item-body col-12 position-absolute ps-3">
+                                <p class="col-md-6 col-12 p-0 mb-1 position-absolute">
+                                    <b>Tout ski émerveille :des vacances en famille</b>
+                                </p>
+
+                                <div class="position-absolute">
+                                    <div class="cta5-item-btn-wrapper col-12 p-0">
+                                        <span class="cta5-item-btn">
+                                            Découvrir
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a id="big-item2" href="/operations/grande-capacite/#xtatc=INT-1907" class="col-lg-6 mb-3"
+                        rel="index, follow">
+                        <div class="cta5-item-image col-12 p-0 position-relative"
+                            style="background-image:
+                            url(&quot;https://www.travelski.com/Content/fr_220620101457_5ef342e719a3ea362f3c01b2.jpg?ts=220620122114&quot;);">
+                            <div class="cta5-item-title col-12 position-relative">
+                                <h2><b>Vacances de février</b></h2>
+                            </div>
+
+                            <div class="cta5-item-body col-12 position-absolute ps-3">
+                                <p class="col-md-6 col-12 p-0 mb-1 position-absolute">
+                                    <b>Tout ski émerveille :des vacances en famille</b>
+                                </p>
+
+                                <div class="position-absolute">
+                                    <div class="cta5-item-btn-wrapper col-12 p-0">
+                                        <span class="cta5-item-btn">
+                                            Découvrir
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- SMALL ITEMS -->
+            <div class="items-wrapper col-12 p-0">
+                <div class="row">
+                    <a href="/chalet-ski/chalet.html#xtatc=INT-1906" class="col-12 col-lg-4 mb-3" rel="index, follow">
+                        <div class="cta5-item-image col-12 p-0 position-relative"
+                            style="background-image: url(&quot;https://www.travelski.com/Content/fr_200624125334_5ef34cce19a3ea362f3c01c2.jpg?ts=200624130707&quot;);">
+                            <div class="cta5-item-title col-12 position-relative">
+                                <h2><b>Nos plus beaux Chalets</b></h2>
+                            </div>
+
+                            <div class="cta5-item-body col-12 position-absolute ps-3">
+                                <p class="col-md-6 col-12 p-0 mb-1 position-absolute">
+                                    <b>Craquez pour le
+                                        confort&nbsp;</b><b>et&nbsp;</b><b>l'authenticité !</b>
+                                </p>
+
+                                <div class="position-absolute">
+                                    <div class="cta5-item-btn-wrapper col-12 p-0">
+                                        <span class="cta5-item-btn">
+                                            Découvrir
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/se-results#e=16" class="col-12 col-lg-4 mb-3" rel="index, follow">
+                        <div class="cta5-item-image col-12 p-0 position-relative"
+                            style="background-image:
+                url(&quot;https://www.travelski.com/Content/fr_220110160634_5dc2871e19a3ea53f4fe05df.png?ts=220110161312&quot;);">
+                            <div class="cta5-item-title col-12 position-relative">
+                                <h2><b>Séjours coup de&nbsp;🤍</b></h2>
+                            </div>
+
+                            <div class="cta5-item-body col-12 position-absolute ps-3">
+                                <p class="col-md-6 col-12 p-0 mb-1 position-absolute">
+                                    <b>Les séjours sélectionnés
+                                        par nos experts&nbsp;</b>
+                                </p>
+
+                                <div class="position-absolute">
+                                    <div class="cta5-item-btn-wrapper col-12 p-0">
+                                        <span class="cta5-item-btn">
+                                            Découvrir
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/ski/noel.html#xtatc=INT-1903" class="col-12 col-lg-4 mb-3" rel="index, follow">
+                        <div class="cta5-item-image col-12 p-0 position-relative"
+                            style="background-image:
+                url(&quot;https://www.travelski.com/Content/fr_211206105629_5ef34c5219a3ea362f3c01c0.jpg?ts=211206112442&quot;);">
+                            <div class="cta5-item-title col-12 position-relative">
+                                <h2><b>Noël au ski</b></h2>
+                            </div>
+
+                            <div class="cta5-item-body col-12 position-absolute ps-3">
+                                <p class="col-md-6 col-12 p-0 mb-1 position-absolute">
+                                    <b>Un noël féérique au ski
+                                        en famille</b>
+                                </p>
+
+                                <div class="position-absolute">
+                                    <div class="cta5-item-btn-wrapper col-12 p-0">
+                                        <span class="cta5-item-btn">
+                                            Découvrir
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA4 -->
+        <section class="h-auto row">
+            <div class="col-12 px-0">
+                <div class="main-title-cta1-wrapper position-relative mt-3 mb-4 p-0">
+                    <h2 class="main-title-cta1 text-uppercase">TOUT SKI COMPTE : Vivre des <b>moments
+                            inoubliables&nbsp;❤</b></h2>
+                </div>
+
+                <div class="items-wrapper row">
+                    <a href="/famille/" class="ts-landscape-item col-lg-6 position-relative mb-5">
+                        <div class="col-12 ts-landscape-item-image p-0">
+                            <img class="ts-image-cover"
+                                src="https://www.travelski.com/Content/fr_220708130639_5bc73e95ae4ad37b21733136.png?ts=220708131048"
+                                loading="lazy">
+                        </div>
+                        <div class="ts-landscape-item-title position-absolute p-0">
+                            <h3 class="ms-5 position-relative">
+                                <b>En famille&nbsp;</b>
+                            </h3>
+                        </div>
+                    </a>
+
+                    <a href="/couple" class="ts-landscape-item col-lg-6 position-relative mb-5">
+                        <div class="col-12 ts-landscape-item-image p-0">
+                            <img class="ts-image-cover"
+                                src="https://www.travelski.com/Content/fr_220708130700_5bc85ba2ae4ad327849470e2.png?ts=220708131049"
+                                loading="lazy">
+                        </div>
+                        <div class="ts-landscape-item-title position-absolute p-0">
+                            <h3 class="ms-5 position-relative"><b>En couple</b></h3>
+                        </div>
+                    </a>
+
+                    <a href="/luxe/#xtatc=INT-1922" class="col-lg-6 ts-landscape-item position-relative mb-5">
+                        <div class="col-12 ts-landscape-item-image p-0">
+                            <img class="ts-image-cover"
+                                src="https://www.travelski.com/Content/fr_191031065228_5bc73d70ae4ad37b21733134.jpg?ts=190410201642"
+                                loading="lazy">
+                        </div>
+                        <div class="ts-landscape-item-title position-absolute p-0">
+                            <h3 class="ms-5 position-relative"><b>Luxe</b></h3>
+                        </div>
+                    </a>
+
+                    <a href="/bien-etre/#xtatc=INT-1923" class="col-lg-6 ts-landscape-item position-relative mb-5">
+                        <div class="col-12 ts-landscape-item-image p-0">
+                            <img class="ts-image-cover"
+                                src="https://www.travelski.com/Content/fr_220708130735_5bc73e37ae4ad37b21733135.png?ts=220708131049"
+                                loading="lazy">
+                        </div>
+                        <div class="ts-landscape-item-title position-absolute p-0">
+                            <h3 class="ms-5 position-relative"><b>Bien-être&nbsp;</b></h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
