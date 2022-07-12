@@ -14,6 +14,10 @@ body {
     color: #e33c46;
 }
 
+.font-weight-bold {
+    font-weight: bold;
+}
+
 .font-weight-300 {
     font-weight: 300;
 }
